@@ -1,3 +1,1 @@
-module.exports = {
-  server: require("./server")
-};
+export { server } from "./server";
