@@ -4,10 +4,14 @@
   "description": "Restful web Api Design with Node.js 12",
   "main": "server.js",
   "scripts": {
-    "start": "node -r esm .",
+    "start8": "node -r esm .",
+    "start": "pm2-runtime start ecosystem.config.js --env production",
     "debug": "DEBUG=* node -r esm .",
     "dev": "node -r esm ./node_modules/nodemon/bin/nodemon.js .",
-    "test": "mocha ./test/*"
+    "test": "mocha ./test/*",
+    "docker:build": "sudo docker build . -t",
+    "heroku:push": "sudo heroku container:push",
+    "heroku:release": "sudo heroku container:release"
   },
   "mocha": {
     "require": [
@@ -35,9 +39,11 @@
     "esm": "^3.2.25",
     "express": "^4.17.1",
     "express-basic-auth": "^1.2.0",
-    "helmet": "^3.21.3"
+    "helmet": "^3.21.3",
+    "pm2": "^4.2.3"
   },
   "devDependencies": {
+    "jest": "^25.1.0",
     "mocha": "^7.1.0",
     "nodemon": "^2.0.2",
     "supertest": "^4.0.2"
