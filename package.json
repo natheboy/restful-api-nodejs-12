@@ -1,17 +1,31 @@
 {
   "name": "restful-api",
   "version": "1.0.0",
-  "description": "Restful Api",
-  "main": "index.js",
+  "description": "Restful web Api Design with Node.js 12",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node -r esm .",
+    "debug": "DEBUG=* node -r esm .",
+    "dev": "node -r esm ./node_modules/nodemon/bin/nodemon.js .",
+    "test": "mocha ./test/*"
+  },
+  "mocha": {
+    "require": [
+      "esm"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/natheboy/restful-api-nodejs-12.git"
   },
   "keywords": [
     "Nodejs",
     "Express",
     "PM2",
     "Supertest",
-    "mongodb"
+    "mongodb",
+    "mocha",
+    "esm"
   ],
   "author": "Adonai Nangui <adonainangui03@gmail.com>",
   "license": "ISC",

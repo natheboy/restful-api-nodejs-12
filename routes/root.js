@@ -12,6 +12,6 @@ rootRouter.post("/", rootControllers.postRoot);
 rootRouter.put("/", rootControllers.putRoot);
 
 // DELETE /v1/
-rootRouter.get("/", rootControllers.deleteRoot);
+rootRouter.delete("/", rootControllers.deleteRoot);
 
 export { rootRouter };
